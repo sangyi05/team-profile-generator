@@ -141,31 +141,34 @@ function generateHtml() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Team Profile</title>
     </head>
     <body>
-    <header>
+    <header class="bg-info d-flex justify-content-center">
         <h1>Team Profile Generator</h1>
     </header>
-    <main>
-        <section>    
-            <div>${finalTeam[0].name}</div>
-            <div>${finalTeam[0].id}</div>
-            <div><a href="mailto:${finalTeam[0].email}"></a></div>
-            <div>${finalTeam[0].office}</div>
-        <section> 
-        <section>    
-            <div>${finalTeam[1].name}</div>
-            <div>${finalTeam[1].id}</div>
-            <div>${finalTeam[1].email}</div>
-            <div>GitHub<a href="https://github.com/${finalTeam[1].github}"></a></div>
-        <section>  
-        <section>    
-            <div>${finalTeam[2].name}</div>
-            <div>${finalTeam[2].id}</div>
-            <div>${finalTeam[2].email}</div>
-            <div>${finalTeam[2].school}</div>
-        <section> 
+    <main class="bg-light">
+        <div class="row ">
+            <section class="card col">    
+                <div class="card-text">${finalTeam[0].name}</div>
+                <div class="card-text">${finalTeam[0].id}</div>
+                <div class="card-text"><a href="mailto:${finalTeam[0].email}">${finalTeam[0].email}</a></div>
+                <div class="card-text">${finalTeam[0].office}</div>
+            </section> 
+            <section class="card col">    
+                <div class="card-text">${finalTeam[1].name}</div>
+                <div class="card-text">${finalTeam[1].id}</div>
+                <div class="card-text"><a href="mailto:${finalTeam[1].email}">${finalTeam[1].email}</a></div>
+                <div class="card-text"><a href="https://github.com/${finalTeam[1].github}">GitHub</a></div>
+            </section>  
+            <section class="card col">    
+                <div class="card-text">${finalTeam[2].name}</div>
+                <div class="card-text">${finalTeam[2].id}</div>
+                <div class="card-text"><a href="mailto:${finalTeam[2].email}">${finalTeam[2].email}</a></div>
+                <div class="card-text">${finalTeam[2].school}</div>
+            </section> 
+        </div>
     </main>
     <footer>
     </footer>
